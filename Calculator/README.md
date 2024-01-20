@@ -1,3 +1,6 @@
 Simple Calculator
 
-![calculator preview](Calculator_View.png)
+![calculator preview](Images_Calculator_View.png)
+
+![calculator preview](Images_Calculator_Results.png)
+
