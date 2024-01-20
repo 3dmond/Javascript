@@ -1,56 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel = "stylesheet" href = "index.css">
+    <title>Calculator</title>
 </head>
-
 <body>
-    <div class="calculator">
-        <div class="heading">
-            <h2><strong>CALCULATOR</strong></h2>
-        </div>
-
-        <div class="content">
-            <form action="#">
-                <p>Number 1</p>
-                <input type="number" name="num1" placeholder="Enter number" id="num1" class = "input">
-
-                <p>Number 2</p>
-                <input type="number" name="num2" placeholder="Enter number" id="num2" class = "input">
-            </form>
-        </div>
-
-        <div class="answer">
-            <input type="number" name="result" id="result" placeholder="Result" disabled>
+    <div class="main">
+        <div class="calculator">
+            <div class="name">
+                <h3>Fx</h3>
+            </div>
+            <div>
+                <form class = "form">
+                    <div  id = "digit_x">
+                        <label for="digit_x"></label>
+                        <input type="text" id="digit_x_input" placeholder = "Enter digit">
+                    </div>
+                    <div  id = "operation">
+                        <select id = "select">
+                            <option value = "+">+</option>
+                            <option value = "-">-</option>
+                            <option value = "*">*</option>
+                            <option value = "/">/</option>
+                        </select>
+                    </div>
+                    <div id = "digit_y">
+                        <label for="digit_y"></label>
+                        <input type="text" id="digit_y_input" placeholder = "Enter digit">
+                    </div>
+                    <div  id = "calculate">
+                        <button type = "button" value = "Calculate" id = "calculate_text" onclick = "calc()">Calculate</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    
-    <script>
-        const num1Input = document.getElementById("num1");
-        const num2Input = document.getElementById("num2");
-        const resultDisplay = document.getElementById("result");
-
-        function calculateSum() {
-            const num1 = parseFloat(num1Input.value);
-            const num2 = parseFloat(num2Input.value);
-
-            if (isNaN(num1) || isNaN(num2)) {
-                resultDisplay.value = "Invalid input";
-            } else {
-                const sum = num1 + num2;
-                resultDisplay.value = sum.toFixed(2);
-            }
-        }
-
-        num1Input.addEventListener("input", calculateSum);
-        num2Input.addEventListener("input", calculateSum);
-    </script>
-
-  
 </body>
-
+<script src = "main.js"></script>
 </html>
